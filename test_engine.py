@@ -1,9 +1,7 @@
 from calcEngine import BasicEngine
 from caclWidget import MainWindow
 import pytest
-from pytestqt import qtbot
-from pytestqt.qt_compat import qt_api
-from PyQt6 import QtCore, QtWidgets
+
 
 import sys
 
@@ -22,7 +20,9 @@ def test_single_add():
 
 
 def test_numbers(qtbot):
-    
+    from pytestqt import qtbot
+    from pytestqt.qt_compat import qt_api
+    from PyQt6 import QtCore
     window = MainWindow()
     engine = BasicEngine()
     qtbot.addWidget(window)
@@ -62,6 +62,9 @@ def test_basics(qtbot):
     Basic test that works more like a sanity check to ensure we are setting up a QApplication
     properly and are able to display a simple event_recorder.
     """
+    from pytestqt import qtbot
+    from pytestqt.qt_compat import qt_api
+    from PyQt6 import QtCore
     assert qt_api.QtWidgets.QApplication.instance() is not None
     widget = qt_api.QtWidgets.QWidget()
     #qt_api.set_qt_api("pyqt6")
