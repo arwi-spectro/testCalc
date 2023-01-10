@@ -1,0 +1,5 @@
+pytest-qt
+pytest
+pyqt6
+invoke
+
