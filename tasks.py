@@ -51,7 +51,6 @@ def tests(
     if x_exit_on_first_error:
         args.append("-x")
     rprint("\n[bold]Testing...")
-    rprint("pytest {args[0]}")
     result = context.run(f"pytest {args[0]}")
     if result.return_code == 0:
         rprint("[bold green]All tests passed")
