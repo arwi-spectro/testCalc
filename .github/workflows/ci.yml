@@ -32,7 +32,6 @@ jobs:
     - name: Set PYTHONPATH
       run: |
         echo "PYTHONPATH=src" >> $GITHUB_ENV
-    - name: Lint with flake8
     - name: Test with pytest
       run: |
         invoke tests --k-only-run=backend
