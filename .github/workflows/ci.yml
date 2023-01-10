@@ -6,12 +6,8 @@ name: Continuous integration
 on:
   push:
     branches:
-      - 'main'
-      - 'FEATURE_*'
-  pull_request:
-    branches:
-      - 'main'
-      - 'FEATURE_*'
+      - 'master'
+
 
 jobs:
   build:
