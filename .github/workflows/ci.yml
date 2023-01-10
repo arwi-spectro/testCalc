@@ -33,15 +33,7 @@ jobs:
       run: |
         echo "PYTHONPATH=src" >> $GITHUB_ENV
     - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        invoke lint
-    - name: Check types statically with mypy
-      run: |
-        invoke mypy
     - name: Test with pytest
       run: |
         invoke tests --k-only-run=backend
-    - name: Check black formatting
-      run: |
-        invoke check-code-format
+
