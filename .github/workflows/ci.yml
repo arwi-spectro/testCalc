@@ -34,5 +34,5 @@ jobs:
         echo "PYTHONPATH=src" >> $GITHUB_ENV
     - name: Test with pytest
       run: |
-        invoke tests --k-only-run=backend
+        invoke tests 
 
